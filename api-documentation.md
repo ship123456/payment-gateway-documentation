@@ -11,6 +11,9 @@
 - [Create Payment](#create-payment)
 - [Get Payment Status](#get-payment-status)
 - [Refund Payment](#refund-payment)
+- [List Payments](#list-payments)
+- [List Refunds](#list-refunds)
+- [List Transactions](#list-transactions)
 - [Webhook Events](#webhook-events)
 - [Error Handling](#error-handling)
 - [Pagination](#pagination)
@@ -453,6 +456,72 @@ To ensure platform stability, API requests are subject to rate limits.
     "message": "Too many requests. Please try again later."
   }
 }
+```
+
+## SDK Examples
+
+### cURL Example
+
+```bash
+curl -X POST https://api.paymentgateway.com/v1/payments \
+  -H "Authorization: Bearer sk_test_123456789" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "amount": 1000,
+    "currency": "INR",
+    "customer_id": "cust_12345",
+    "payment_method": "UPI"
+  }'
+
+### JavaScript Example
+
+```javascript
+const response = await fetch(
+  "https://api.paymentgateway.com/v1/payments",
+  {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer sk_test_123456789",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      amount: 1000,
+      currency: "INR",
+      customer_id: "cust_12345",
+      payment_method: "UPI"
+    })
+  }
+);
+
+const data = await response.json();
+console.log(data);
+```
+### Python Example
+
+```python
+import requests
+
+url = "https://api.paymentgateway.com/v1/payments"
+
+headers = {
+    "Authorization": "Bearer sk_test_123456789",
+    "Content-Type": "application/json"
+}
+
+payload = {
+    "amount": 1000,
+    "currency": "INR",
+    "customer_id": "cust_12345",
+    "payment_method": "UPI"
+}
+
+response = requests.post(
+    url,
+    headers=headers,
+    json=payload
+)
+
+print(response.json())
 ```
 
 ### Best Practices
