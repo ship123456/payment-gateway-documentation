@@ -74,14 +74,19 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - Access to sandbox environment  
 - Internet connectivity  
 
-## Sandbox Environment
+## Environment Support
 
-A sandbox environment is available for testing payment integrations without processing real transactions.
+### Sandbox Environment
 
-- No real funds are transferred.
-- Test API credentials are required.
-- Sandbox data is separate from production data.
-- Webhook events can be tested safely before deployment.
+A sandbox environment is available for testing payment flows without processing real transactions.
+
+- Test transactions do not move real funds.
+- Sandbox data is isolated from production.
+- Test API credentials must be used.
+
+### Production Environment
+
+Production access requires valid merchant credentials and approved API keys.
   
 ## Assumptions
 
