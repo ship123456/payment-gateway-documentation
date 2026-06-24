@@ -175,23 +175,15 @@ The Payment Gateway System follows a service-oriented architecture designed to p
 
 ### Architecture Diagram
 
-Client Application
-        ↓
-Payment Gateway API
-        ↓
-Authentication Service
-        ↓
-Payment Processing Service
-        ↓
-Payment Processor
-        ↓
-Bank / Card Network
-
-        ↓
-
-Webhook Service
-        ↓
-Client Application
+```mermaid
+flowchart TD
+    A[Client Application] --> B[Payment Gateway API]
+    B --> C[Authentication Service]
+    B --> D[Payment Processing Service]
+    D --> E[Bank / Card Network]
+    D --> F[Webhook Service]
+    F --> A
+```
 
 ### Architecture Benefits
 
@@ -214,7 +206,7 @@ Security is a critical aspect of payment processing. The Payment Gateway impleme
 - Audit logs are maintained for transaction tracking and compliance purposes.
 - Webhook requests can be verified using signature validation.
 - Rate limiting is implemented to prevent abuse and unauthorized access.
-- - Payment card information is never stored in plain text.
+- Payment card information is never stored in plain text.
 - Failed authentication attempts are monitored and logged.
 - Security controls are reviewed and updated periodically.
 
