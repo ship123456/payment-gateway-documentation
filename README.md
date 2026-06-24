@@ -32,7 +32,7 @@
 ## Version Information
 
 | Item | Value |
-|:--------|--------:|
+|--------|--------|
 | Documentation Version | 1.0 |
 | API Version | v1 |
 | Status | Active |
