@@ -99,6 +99,7 @@ All requests should include the following headers:
 | Authorization | Yes | API authentication token |
 | Content-Type | Yes | Request content type |
 | Accept | Yes | Expected response format |
+| Idempotency-Key | No | Unique key used to prevent duplicate requests |
 
 ### Example
 
@@ -320,14 +321,6 @@ GET /payments?page=1&limit=20&status=success
   ]
 }
 ```
-
-### Response Codes
-
-| Code | Description |
-|------|------------|
-| 200 | Success |
-| 401 | Unauthorized |
-
 ### Response Fields
 
 | Field | Type | Description |
@@ -337,6 +330,14 @@ GET /payments?page=1&limit=20&status=success
 | total_records | integer | Total available records |
 | total_pages | integer | Total number of pages |
 | data | array | List of payment objects |
+
+### Response Codes
+
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 401 | Unauthorized |
+
 
 ## List Refunds
 
@@ -380,14 +381,6 @@ GET /refunds?page=1&limit=20&status=processed
   ]
 }
 ```
-
-### Response Codes
-
-| Code | Description |
-|------|------------|
-| 200 | Success |
-| 401 | Unauthorized |
-
 ### Response Fields
 
 | Field | Type | Description |
@@ -397,6 +390,13 @@ GET /refunds?page=1&limit=20&status=processed
 | total_records | integer | Total available refund records |
 | total_pages | integer | Total number of pages |
 | data | array | List of refund objects |
+
+### Response Codes
+
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 401 | Unauthorized |
 
 ## List Transactions
 
@@ -441,14 +441,6 @@ GET /transactions?page=1&limit=20&status=success
   ]
 }
 ```
-
-### Response Codes
-
-| Code | Description |
-|------|------------|
-| 200 | Success |
-| 401 | Unauthorized |
-
 ### Response Fields
 
 | Field | Type | Description |
@@ -458,6 +450,13 @@ GET /transactions?page=1&limit=20&status=success
 | total_records | integer | Total available transaction records |
 | total_pages | integer | Total number of pages |
 | data | array | List of transaction objects |
+
+### Response Codes
+
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 401 | Unauthorized |
 
 ## Webhook Events
 
