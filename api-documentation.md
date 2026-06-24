@@ -15,6 +15,7 @@
 - [Error Handling](#error-handling)
 - [Pagination](#pagination)
 - [Rate Limiting](#rate-limiting)
+- [SDK Examples](#sdk-examples)
 
 ## Version Information
 
@@ -85,7 +86,6 @@ Idempotency-Key: 550e8400-e29b-41d4-a716-446655440000
 - Each key should be unique for a payment request.
 - Reusing the same key with the same request returns the original response.
 - Idempotency keys help prevent accidental duplicate transactions.
-```
 
 ## Headers
 
@@ -313,6 +313,21 @@ Configure a secure HTTPS endpoint to receive webhook notifications.
 - Validate event payloads before updating application data.
 - Return HTTP 200 status after successful processing.
 
+### Signature Verification
+
+Webhook requests include a signature header:
+
+```http
+X-Signature: sha256=5d41402abc4b2a76b9719d911017c592
+```
+Before processing a webhook event:
+
+1. Retrieve the webhook secret from the merchant dashboard.
+2. Generate an HMAC SHA-256 hash using the request payload.
+3. Compare the generated signature with the `X-Signature` header.
+4. Reject requests with invalid signatures.
+
+
 ## Error Handling
 
 The API uses standard HTTP status codes to indicate request outcomes.
@@ -362,6 +377,11 @@ Pagination is supported for endpoints that return large collections of resources
 ```http
 GET /payments
 ```
+### Supported Endpoints
+
+- GET /payments
+- GET /refunds
+- GET /transactions
 
 ### Query Parameters
 
@@ -440,4 +460,4 @@ To ensure platform stability, API requests are subject to rate limits.
 - Implement request retries with exponential backoff.
 - Avoid sending duplicate requests.
 - Cache frequently requested data where possible.
-```
+
