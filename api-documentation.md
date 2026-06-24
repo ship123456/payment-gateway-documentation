@@ -378,7 +378,57 @@ GET /refunds?page=1&limit=20&status=processed
 | 200 | Success |
 | 401 | Unauthorized |
 
+## List Transactions
 
+Retrieves a paginated list of payment transactions.
+
+### Endpoint
+
+```http
+GET /transactions
+```
+
+### Query Parameters
+
+| Parameter | Type | Required | Description |
+|------------|--------|----------|-------------|
+| page | integer | No | Page number |
+| limit | integer | No | Records per page |
+| status | string | No | Filter by transaction status |
+
+### Example Request
+
+```http
+GET /transactions?page=1&limit=20&status=success
+```
+
+### Success Response
+
+```json
+{
+  "page": 1,
+  "limit": 20,
+  "total_records": 200,
+  "total_pages": 10,
+  "data": [
+    {
+      "transaction_id": "txn_123456",
+      "payment_id": "pay_123456",
+      "status": "success",
+      "amount": 1000,
+      "currency": "INR"
+    }
+  ]
+}
+```
+
+### Response Codes
+
+| Code | Description |
+|------|------------|
+| 200 | Success |
+| 401 | Unauthorized |
+```
 
 ## Webhook Events
 
