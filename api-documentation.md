@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Version Information](#version-information)
 - [Base URLs](#base-urls)
 - [Authentication](#authentication)
 - [Headers](#headers)
@@ -13,6 +14,14 @@
 - [Error Handling](#error-handling)
 - [Rate Limiting](#rate-limiting)
 
+## Version Information
+
+| Item | Value |
+|--------|--------|
+| Documentation Version | 1.0 |
+| API Version | v1 |
+| Status | Active |
+
 ## Overview
 
 This document provides detailed API information for integrating with the Payment Gateway System.
@@ -20,6 +29,10 @@ This document provides detailed API information for integrating with the Payment
 The APIs allow merchants to create payments, check transaction status, process refunds, and receive real-time payment updates through webhooks.
 
 All API requests use REST principles, JSON format, HTTPS, and API key-based authentication.
+
+### API Format
+
+All request and response bodies are exchanged in JSON format.
 
 ## Base URLs
 
