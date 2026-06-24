@@ -328,6 +328,16 @@ GET /payments?page=1&limit=20&status=success
 | 200 | Success |
 | 401 | Unauthorized |
 
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| page | integer | Current page number |
+| limit | integer | Number of records returned per page |
+| total_records | integer | Total available records |
+| total_pages | integer | Total number of pages |
+| data | array | List of payment objects |
+
 ## List Refunds
 
 Retrieves a paginated list of refunds.
@@ -377,6 +387,16 @@ GET /refunds?page=1&limit=20&status=processed
 |------|------------|
 | 200 | Success |
 | 401 | Unauthorized |
+
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| page | integer | Current page number |
+| limit | integer | Number of records returned per page |
+| total_records | integer | Total available refund records |
+| total_pages | integer | Total number of pages |
+| data | array | List of refund objects |
 
 ## List Transactions
 
@@ -429,6 +449,15 @@ GET /transactions?page=1&limit=20&status=success
 | 200 | Success |
 | 401 | Unauthorized |
 
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| page | integer | Current page number |
+| limit | integer | Number of records returned per page |
+| total_records | integer | Total available transaction records |
+| total_pages | integer | Total number of pages |
+| data | array | List of transaction objects |
 
 ## Webhook Events
 
