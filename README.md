@@ -25,6 +25,14 @@
 - [Future Enhancements](#future-enhancements)
 - [Project Structure](#project-structure)
 
+## Version Information
+
+| Item | Value |
+|:--------|--------:|
+| Documentation Version | 1.0 |
+| API Version | v1 |
+| Status | Active |
+
 ## Overview
 
 The Payment Gateway System enables businesses to securely process online payments through a unified set of REST APIs. It supports payment creation, transaction tracking, refunds, and real-time payment updates via webhooks.
@@ -35,11 +43,38 @@ It supports multiple payment methods including credit cards, debit cards, UPI, n
 
 All APIs follow REST principles, use JSON format, and require HTTPS for secure communication. Authentication is handled using API keys.
 
+## Quick Start
+
+1. Obtain API credentials.
+2. Configure API authentication.
+3. Create a payment request.
+4. Configure webhook notifications.
+5. Test transactions in the sandbox environment.
+6. Move to production after validation.
+
+For detailed API usage, see the API Documentation.
+
+## Intended Audience
+
+This documentation is intended for:
+
+- Backend Developers
+- Frontend Developers
+- Integration Engineers
+- Solution Architects
+- Technical Support Teams
+
 ## API Reference
 
 For detailed API endpoints, request/response examples, authentication headers, and webhook payloads, see:
 
 [API Documentation](./api-documentation.md)
+
+## Documentation Scope
+
+This document provides a high-level overview of the Payment Gateway system, architecture, authentication, security considerations, and integration requirements.
+
+Detailed API endpoint documentation is available in the API Documentation file.
 
 
 ## Features
@@ -62,7 +97,6 @@ For detailed API endpoints, request/response examples, authentication headers, a
 - HTTPS  
 - Webhooks
 - API Key Authentication  
-- Secure Payment Processor Integration 
 - TLS Encryption  
 - Relational Database  
 
@@ -77,6 +111,10 @@ For detailed API endpoints, request/response examples, authentication headers, a
 
 ## Environment Support
 
+- Sandbox and production environments use separate credentials.
+- Test transactions performed in the sandbox environment do not affect production systems.
+- Configuration details for each environment are provided in the API Documentation.
+  
 ### Sandbox Environment
 
 A sandbox environment is available for testing payment flows without processing real transactions.
@@ -210,6 +248,12 @@ The system follows a service-oriented architecture.
 ### Compliance
 
 - Payment processors handling card data should maintain PCI DSS compliance.
+
+### Data Protection
+
+- Sensitive payment information should be transmitted only over HTTPS.
+- Access credentials should be stored securely and rotated periodically.
+- Raw card data should never be logged or stored by client applications.
 
 ## Error Handling
 
