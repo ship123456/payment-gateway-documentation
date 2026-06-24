@@ -351,6 +351,36 @@ To ensure platform stability, API requests are subject to rate limits.
 | page | integer | Page number to retrieve |
 | limit | integer | Number of records per page |
 
+### Example Request
+
+```http
+GET /payments?page=1&limit=20
+```
+```json
+{
+  "page": 1,
+  "limit": 20,
+  "total_records": 125,
+  "total_pages": 7,
+  "data": [
+    {
+      "payment_id": "pay_123456",
+      "status": "success",
+      "amount": 1000
+    }
+  ]
+}
+```
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| page | integer | Current page number |
+| limit | integer | Number of records returned per page |
+| total_records | integer | Total available records |
+| total_pages | integer | Total number of pages |
+| data | array | Collection of returned resources |
+
 ### Limits
 
 | Limit Type | Value |
@@ -358,6 +388,13 @@ To ensure platform stability, API requests are subject to rate limits.
 | Requests Per Minute | 100 |
 | Requests Per Hour | 5000 |
 
+### Notes
+
+- Pagination parameters are optional.
+- Default page value is 1.
+- Default limit value is 20.
+- Maximum limit value is 100.
+  
 ### Rate Limit Response
 
 ```json
