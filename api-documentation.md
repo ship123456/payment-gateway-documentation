@@ -488,6 +488,15 @@ Configure a secure HTTPS endpoint to receive webhook notifications.
   "currency": "INR"
 }
 ```
+### Payload Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| event | string | Webhook event type |
+| payment_id | string | Unique payment identifier |
+| status | string | Current payment status |
+| amount | integer | Payment amount |
+| currency | string | Transaction currency |
 
 ### Webhook Security
 
