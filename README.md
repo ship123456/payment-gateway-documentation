@@ -97,7 +97,7 @@ Detailed API endpoint documentation is available in the API Documentation file.
 
 - REST APIs  
 - JSON  
-- HTTPS  
+- HTTPS
 - Webhooks
 - API Key Authentication  
 - TLS Encryption  
