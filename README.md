@@ -80,7 +80,6 @@ This document provides a high-level overview of the Payment Gateway system, arch
 
 Detailed API endpoint documentation is available in the API Documentation file.
 
-
 ## Features
 
 - Secure payment processing via REST APIs  
