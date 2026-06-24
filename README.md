@@ -3,8 +3,12 @@
 
 ## Table of Contents
 
+- [Version Information](#version-information)
 - [Overview](#overview)
+- [Quick Start](#quick-start)
+- [Intended Audience](#intended-audience)
 - [API Reference](#api-reference)
+- [Documentation Scope](#documentation-scope)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
