@@ -238,6 +238,14 @@ POST /payments/{payment_id}/refund
   "amount": 500
 }
 ```
+### Response Fields
+
+| Field | Type | Description |
+|---------|--------|-------------|
+| refund_id | string | Unique refund identifier |
+| payment_id | string | Associated payment identifier |
+| status | string | Current refund status |
+| amount | integer | Refunded amount |
 
 ### Response Codes
 
