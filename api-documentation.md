@@ -19,6 +19,7 @@
 - [Pagination](#pagination)
 - [Rate Limiting](#rate-limiting)
 - [SDK Examples](#sdk-examples)
+- [Troubleshooting](#troubleshooting)
 
 ## Version Information
 
