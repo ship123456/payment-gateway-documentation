@@ -28,6 +28,22 @@
 | API Version | v1 |
 | Status | Active |
 
+## API Versioning
+
+The Payment Gateway API uses URI-based versioning.
+
+### Current Version
+
+```http
+https://api.paymentgateway.com/v1
+```
+
+### Versioning Policy
+
+- Breaking changes are introduced only in a new API version.
+- Backward-compatible improvements may be released without changing the API version.
+- Deprecated API versions remain available for a limited period before retirement.
+
 ## Overview
 
 This document provides detailed API information for integrating with the Payment Gateway System.
@@ -48,6 +64,19 @@ All request and response bodies are exchanged in JSON format.
 | Production | `https://api.paymentgateway.com/v1` |
 
 Use the sandbox environment for testing. Use the production environment only after the integration has been verified.
+
+## Sandbox Test Data
+
+Use the following sample values while testing in the sandbox environment.
+
+| Item | Sample Value |
+|------|--------------|
+| API Key | `sk_test_123456789` |
+| Customer ID | `cust_12345` |
+| Payment ID | `pay_123456` |
+| Refund ID | `ref_123456` |
+
+> **Note:** Sandbox transactions do not process real payments and are intended for testing purposes only.
 
 ## Authentication
 
@@ -108,6 +137,13 @@ Authorization: Bearer sk_test_123456789
 Content-Type: application/json
 Accept: application/json
 ```
+### Request Tracking
+
+Every API response includes a unique request identifier that can be used for debugging and support.
+
+| Header | Description |
+|--------|-------------|
+| X-Request-ID | Unique identifier assigned to each API request. Include this value when contacting support. |
 
 ## Create Payment
 
