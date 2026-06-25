@@ -749,6 +749,11 @@ To ensure platform stability, API requests are subject to rate limits.
   }
 }
 ```
+### Best Practices
+
+- Implement request retries with exponential backoff.
+- Avoid sending duplicate requests.
+- Cache frequently requested data where possible.
 
 ## SDK Examples
 
@@ -816,12 +821,6 @@ response = requests.post(
 
 print(response.json())
 ```
-
-### Best Practices
-
-- Implement request retries with exponential backoff.
-- Avoid sending duplicate requests.
-- Cache frequently requested data where possible.
 
 ## Troubleshooting
 
