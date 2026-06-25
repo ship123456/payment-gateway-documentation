@@ -62,6 +62,8 @@ To access the Payment Gateway, follow these steps:
 
 If the entered credentials are correct, you will be redirected to the dashboard.
 
+![Login Page](images/login.png)
+
 ### Forgot Password
 
 If you forget your password:
@@ -70,6 +72,8 @@ If you forget your password:
 2. Enter your registered email address.
 3. Follow the instructions sent to your email to reset your password.
 4. Log in using your new password.
+
+![Forgot Password](images/forgot-password.png)
 
 ## 5. Dashboard Overview
 
@@ -85,6 +89,8 @@ The dashboard allows you to:
 - View notifications and recent activity.
 - Manage your account settings.
 
+![Dashboard](images/dashboard.png)
+
 ## 6. Making a Payment
 
 Follow these steps to create a new payment:
@@ -98,6 +104,10 @@ Follow these steps to create a new payment:
 
 After the payment is processed, a confirmation message and transaction ID will be displayed. You can also view the transaction in your payment history.
 
+![New Payment](images/new-payment.png)
+
+![Payment Success](images/payment-success.png)
+
 ## 7. Viewing Payment History
 
 The Payment History page allows you to view all your previous transactions.
@@ -109,6 +119,8 @@ To view your payment history:
 3. Select a transaction to view its details, including the transaction ID, payment method, amount, date, and status.
 
 You can use the available search and filter options to quickly locate specific transactions.
+
+![Payment History](images/payment-history.png)
 
 ## 8. Refunds
 
@@ -122,6 +134,8 @@ To request a refund:
 4. Confirm the refund request.
 
 After the request is submitted, the refund status can be tracked from the transaction details. Processing time may vary depending on the payment method and financial institution.
+
+![Refund Request](images/refund-request.png)
 
 ## 9. Notifications
 
@@ -151,6 +165,8 @@ From this section, you can:
 - Update security settings, where applicable.
 
 Remember to save your changes before leaving the page.
+
+![Account Settings](images/account-settings.png)
 
 ## 11. Troubleshooting
 
