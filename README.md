@@ -1,6 +1,8 @@
 
 # Payment Gateway Documentation
 
+![Payment Gateway Dashboard](images/dashboard.png)
+
 ## Table of Contents
 
 - [Version Information](#version-information)
