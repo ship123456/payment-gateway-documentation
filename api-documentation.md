@@ -4,7 +4,7 @@
 
 - [Version Information](#version-information)
 - [API Versioning](#api-versioning)
-- [Deprecation Policy](#deprecation-policy)  
+- [Deprecation Policy](#deprecation-policy) 
 - [Overview](#overview)
 - [Base URLs](#base-urls)
 - [Sandbox Test Data](#sandbox-test-data)
