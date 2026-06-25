@@ -644,7 +644,7 @@ The API uses standard HTTP status codes to indicate request outcomes.
   "error": {
     "code": "INVALID_REQUEST",
     "message": "Invalid request payload"
-  }
+  },
   "request_id": "req_123456"
 }
 ```
