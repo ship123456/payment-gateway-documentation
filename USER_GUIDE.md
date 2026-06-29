@@ -130,6 +130,8 @@ The Dashboard displays:
 - Monthly payment analytics
 - Recent transactions
 - Quick navigation to application modules
+- Notification center
+- Sidebar navigation
 
 > **Screenshot:** Dashboard
 
@@ -178,6 +180,8 @@ After a successful submission:
 - A unique Payment ID is generated.
 - The payment is added to Payment History.
 - A webhook event is generated automatically.
+
+The generated payment is automatically available in **Payment History** and a corresponding webhook event is created if webhooks are enabled.
 
 > **Screenshot:** Payment Success
 
@@ -398,7 +402,7 @@ To change your password:
 
 Enable or disable application notifications using the available checkboxes.
 
-### Light & Dark Theme
+### Appearance (Light & Dark Theme)
 
 Choose between **Light** and **Dark** themes.
 
@@ -421,6 +425,7 @@ To securely exit the application:
 | Webhook logs are empty | Ensure webhooks are enabled before creating payments. |
 | File upload failed | Verify the selected file and try again. |
 | Theme not changing | Refresh the application and try again. |
+| Unable to submit a form | Verify that all required fields are completed and validation errors have been resolved.|
 
 ## 14. Frequently Asked Questions
 
@@ -447,3 +452,7 @@ Open **Settings** and select your preferred theme.
 ### Where are my support requests stored?
 
 Submitted requests are available in **My Support Tickets**.
+
+### Is application data stored permanently?
+
+No. The application stores data locally in the browser using Local Storage.
