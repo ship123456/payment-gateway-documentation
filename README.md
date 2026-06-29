@@ -10,7 +10,6 @@
 - [Intended Audience](#intended-audience)
 - [API Reference](#api-reference)
 - [Documentation Scope](#documentation-scope)
-- [Documentation Set](#documentation-set)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
@@ -30,6 +29,7 @@
 - [Known Limitations](#known-limitations)
 - [Future Enhancements](#future-enhancements)
 - [Project Structure](#project-structure)
+- [Documentation Set](#documentation-set)
 
 ## Version Information
 
@@ -46,7 +46,7 @@ The Payment Gateway Dashboard is a web application that simulates a modern payme
 
 The application demonstrates a complete payment workflow using a clean and intuitive interface while following common payment gateway concepts such as payment processing, transaction tracking, webhook notifications, and secure authentication.
 
-This repository contains a complete documentation set covering installation, application usage, API reference, technical implementation, troubleshooting, and release history.
+This project demonstrates both frontend development and technical writing practices by providing a complete documentation set covering installation, application usage, API reference, technical implementation, troubleshooting, and release management.
 
 ## Quick Start
 
@@ -78,34 +78,36 @@ This README provides a high-level overview of the Payment Gateway Dashboard, inc
 
 Detailed implementation and integration information is available in the accompanying documentation files.
 
-## Documentation Set
-
-| Document | Description |
-|----------|-------------|
-| README.md | Project overview and introduction |
-| USER_GUIDE.md | End-user instructions for using the application |
-| API_DOCUMENTATION.md | API endpoints, authentication, requests, and responses |
-| TECHNICAL_OVERVIEW.md | System architecture and implementation details |
-| INSTALLATION_GUIDE.md | Project setup and installation instructions |
-| TROUBLESHOOTING_GUIDE.md | Common issues and recommended solutions |
-| RELEASE_NOTES.md | Version history and feature updates |
-
 ## Features
 
-- Dashboard with payment analytics and recent transactions
-- Create and manage payment requests
-- Payment History with search, filters, and CSV export
-- View detailed payment information
-- Webhook configuration and delivery monitoring
-- Webhook event logs with payload details
-- Support ticket submission and tracking
-- FAQ section for common questions
-- User profile management
-- Application settings management
-- Authentication (Sign In, Sign Up, Forgot Password, Reset Password)
-- Local storage-based data persistence
-- Responsive dashboard layout
-- Clean and intuitive user interface
+### Payment Management
+
+- Create payments
+- Payment History
+- Payment Details
+
+### Webhooks
+
+- Configure webhook endpoint
+- Monitor webhook deliveries
+
+### Support
+
+- Contact Support
+- Support Tickets
+- FAQ
+
+### User Management
+
+- Authentication
+- Profile
+- Settings
+
+### Additional Features
+
+- CSV Export
+- Responsive Layout
+- Local Storage
 
 ## Tech Stack
 
@@ -189,3 +191,273 @@ npm start
 ```
 http://localhost:3000
 ```
+
+## Authentication
+
+The application provides a complete authentication flow for user access and account management.
+
+### Supported Authentication Features
+
+- Sign In
+- Sign Up
+- Forgot Password
+- Reset Password
+
+### Authentication Method
+
+User authentication is simulated within the application for demonstration purposes. In a production environment, authentication should be integrated with a secure backend service using industry-standard authentication mechanisms such as JWT or OAuth.
+
+### Security Notes
+
+- Passwords should always be encrypted before storage.
+- HTTPS should be used for all authentication requests.
+- Authentication tokens should be stored securely.
+- Session expiration should be implemented in production.
+
+## Supported Payment Methods
+
+The application supports the following payment methods:
+
+- UPI
+- Credit Card
+- Debit Card
+- Net Banking
+- Digital Wallet
+
+### Supported Currency
+
+- INR (Indian Rupee)
+
+## Payment Flow
+
+The payment workflow consists of the following steps:
+
+1. User navigates to **New Payment**.
+2. Customer information is entered.
+3. Payment details are validated.
+4. A payment request is created.
+5. The payment is recorded in Payment History.
+6. A webhook event is generated.
+7. Users can view transaction details from the dashboard.
+
+## Architecture
+
+The Payment Gateway Dashboard follows a modular, component-based architecture built with React. The application separates the user interface, business logic, state management, and data services to improve maintainability and scalability.
+
+### Architecture Components
+
+- User Interface (React Components)
+- React Router
+- Context API
+- Service Layer
+- Local Storage
+- Notification System
+
+### High-Level Architecture
+
+```text
+                 User
+                  │
+                  ▼
+         React User Interface
+                  │
+                  ▼
+            React Router
+                  │
+                  ▼
+            Context Providers
+                  │
+      ┌───────────┼───────────┐
+      ▼           ▼           ▼
+ Payment      Webhook      Support
+ Service      Service      Service
+      │           │           │
+      └───────────┼───────────┘
+                  ▼
+            Local Storage
+```
+
+### Component Responsibilities
+
+| Component | Responsibility |
+|-----------|----------------|
+| React Components | Render the user interface and handle user interactions. |
+| React Router | Manage application navigation. |
+| Context Providers | Manage shared application state. |
+| Service Layer | Process business logic and data operations. |
+| Local Storage | Persist application data between browser sessions. |
+| React Toastify | Display success and error notifications. |
+
+> A detailed architecture diagram and component interactions are documented in **TECHNICAL_OVERVIEW.md**.
+
+## Security Considerations
+
+The application follows several security best practices.
+
+### Security Measures
+
+- Client-side form validation
+- Protected application routes
+- Secure authentication flow
+- Webhook secret configuration
+- Input validation
+- Local storage isolation
+- User feedback through notifications
+
+### Best Practices
+
+- Use HTTPS in production.
+- Never expose sensitive credentials.
+- Validate all user inputs.
+- Regularly rotate API credentials.
+- Implement server-side authentication for production deployments.
+
+## Error Handling
+
+The application validates user input and displays meaningful error messages when invalid data is detected.
+
+### Common Error Codes
+
+| Code | Description |
+|------|-------------|
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden |
+| 404 | Resource Not Found |
+| 422 | Validation Error |
+| 500 | Internal Server Error |
+
+### Validation Examples
+
+- Required fields cannot be left empty.
+- Invalid email addresses are rejected.
+- Payment amount must be greater than zero.
+- Unsupported payment methods are not accepted.
+
+## Payment Statuses
+
+The application supports the following payment statuses:
+
+| Status | Description |
+|--------|-------------|
+| Pending | Payment request has been created but is awaiting processing. |
+| Processing | Payment is currently being processed. |
+| Success | Payment completed successfully. |
+| Failed | Payment could not be completed. |
+| Cancelled | Payment was cancelled before completion. |
+| Refunded | Payment has been refunded to the customer. |
+
+## Webhook Events
+
+Webhook events notify external systems whenever the status of a payment changes.
+
+### Supported Events
+
+| Event | Description |
+|------|-------------|
+| payment.created | Triggered when a payment is created. |
+| payment.processing | Triggered when payment processing begins. |
+| payment.success | Triggered after a successful payment. |
+| payment.failed | Triggered when a payment fails. |
+| payment.cancelled | Triggered when a payment is cancelled. |
+| payment.refunded | Triggered after a successful refund. |
+
+## FAQ
+
+### What is the purpose of this application?
+
+The application demonstrates a complete payment gateway dashboard with payment management, webhook monitoring, and support features.
+
+### Does this application process real payments?
+
+No. The project simulates payment processing for demonstration and learning purposes.
+
+### How are webhook events generated?
+
+Webhook events are automatically generated whenever a payment is created or its status changes.
+
+### Where is the application data stored?
+
+The application stores data locally using the browser's Local Storage.
+
+### Can payment history be exported?
+
+Yes. Payment History can be exported as a CSV file.
+
+### Does the application support authentication?
+
+Yes. The application includes Sign In, Sign Up, Forgot Password, and Reset Password screens.
+
+## Glossary
+
+| Term | Definition |
+|------|------------|
+| API | Application Programming Interface used for communication between systems. |
+| Authentication | Process of verifying user identity before granting access. |
+| Dashboard | Central interface for managing application features. |
+| Merchant | Business or user accepting payments through the gateway. |
+| Payment Gateway | System responsible for securely processing payment transactions. |
+| Transaction | A payment initiated by a customer. |
+| Webhook | An HTTP callback triggered automatically when an event occurs. |
+| Payload | Data sent as part of a webhook event. |
+| Local Storage | Browser-based storage used to persist application data. |
+| CSV | Comma-Separated Values file used for exporting tabular data. |
+
+## Known Limitations
+
+- Uses Local Storage instead of a backend database.
+- Payment processing is simulated.
+- Authentication is frontend-only.
+- No real payment provider integration.
+- Webhook delivery is simulated.
+- Single currency (INR) support.
+
+## Future Enhancements
+
+- Real payment gateway integration
+- Role-based access control
+- Multiple currency support
+- Payment analytics dashboard
+- Email notifications
+- Dark mode
+- Multi-language support
+- Cloud database integration
+
+## Project Structure
+
+```text
+payment-gateway/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── context/
+│   ├── data/
+│   ├── layouts/
+│   ├── pages/
+│   ├── services/
+│   ├── styles/
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+├── README.md
+├── USER_GUIDE.md
+├── API_DOCUMENTATION.md
+├── TECHNICAL_OVERVIEW.md
+├── INSTALLATION_GUIDE.md
+├── TROUBLESHOOTING_GUIDE.md
+└── RELEASE_NOTES.md
+```
+
+## Documentation Set
+
+| Document | Description |
+|----------|-------------|
+| README.md | Project overview and introduction |
+| USER_GUIDE.md | End-user instructions for using the application |
+| API_DOCUMENTATION.md | API endpoints, authentication, requests, and responses |
+| TECHNICAL_OVERVIEW.md | System architecture and implementation details |
+| INSTALLATION_GUIDE.md | Project setup and installation instructions |
+| TROUBLESHOOTING_GUIDE.md | Common issues and recommended solutions |
+| RELEASE_NOTES.md | Version history and feature updates |
