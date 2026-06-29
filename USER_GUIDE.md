@@ -179,7 +179,7 @@ After a successful submission:
 - A success message is displayed.
 - A unique Payment ID is generated.
 - The payment is added to Payment History.
-- A webhook event is generated automatically.
+- A webhook event is generated if webhooks are enabled.
 
 The generated payment is automatically available in **Payment History** and a corresponding webhook event is created if webhooks are enabled.
 
@@ -311,9 +311,9 @@ To submit a support request:
 
 The Contact Support form validates:
 
-- Subject
-- Category
-- Message
+- Subject is required.
+- Category must be selected.
+- Message is required.
 
 ### Uploading Attachments
 
@@ -357,10 +357,10 @@ The Profile page allows users to view and update their personal information.
 
 The page displays:
 
-- Full Name
-- Email Address
-- Phone Number
-- Company Name
+- Full Name is required.
+- Email Address must be valid.
+- Phone Number is required.
+- Company Name is required.
 
 ### Updating Profile Information
 
