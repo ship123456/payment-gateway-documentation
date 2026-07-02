@@ -259,6 +259,8 @@ The application supports the following payment methods:
 ### Supported Currency
 
 - INR (Indian Rupee)
+- USD
+- EURO
 
 ## Payment Flow
 
