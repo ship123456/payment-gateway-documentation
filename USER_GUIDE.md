@@ -267,6 +267,8 @@ Provides complete payment information without leaving the Payment History page.
 
 Allows users to update their profile information.
 
+## Fields
+
 | Field | Description | Required | Ediatble Fields 
 |--------|-------------| -------- | ------------ |
 |  Name | User's name | yes    |  no    |  
@@ -323,7 +325,7 @@ Allows users to submit support requests.
 ## Fields
 
 | Field | Description | Required | Ediatble Fields |
-|--------|-------------| -------- |
+|--------|-------------| -------- |------|
 |  Name | User's name | yes    | no    |
 | Email | User's email  | yes    | no|
 | Category  | Category of request | yes   | yes   |
