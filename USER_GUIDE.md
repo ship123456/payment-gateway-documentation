@@ -21,8 +21,6 @@ This guide explains how to use the PayFlow application. It covers user authentic
 - [Support Ticket Details](#support-ticket-details)
 - [Frequently Asked Questions](#frequently-asked-questions)
 
----
-
 # Login
 
 ## Purpose
@@ -31,10 +29,10 @@ The Login page allows registered users to securely access the PayFlow applicatio
 
 ## Fields
 
-| Field | Description |
-|--------|-------------|
-| Email | Registered email address |
-| Password | Account password |
+| Field | Description | required
+|--------|-------------| -------- |
+| Email | Registered email address | no |
+| Password | Account password |  no |
 
 ## Buttons
 
@@ -55,8 +53,6 @@ If the credentials are valid, the Dashboard page is displayed.
 
 ![Login](images/login.png)
 
----
-
 # Sign Up
 
 ## Purpose
@@ -65,12 +61,12 @@ The Sign Up page allows new users to create an account.
 
 ## Fields
 
-| Field | Description |
-|--------|-------------|
-| Full Name | User's name |
-| Email | Email address |
-| Password | Account password |
-| Confirm Password | Account password |
+| Field | Description | Required 
+|--------|-------------| -------- |
+| Full Name | User's name | yes    |
+| Email | Email address | yes    |
+| Password | Account password | yes    |
+| Confirm Password | Account password | yes   |
 
 ## Buttons
 
@@ -90,9 +86,8 @@ The Sign Up page allows new users to create an account.
 
 A new account is created successfully.
 
-![Sign Up](images/signup.png)
+![Sign Up](images/signuo.png)
 
----
 
 # Dashboard
 
@@ -122,8 +117,6 @@ Users can monitor payment activity from a single location.
 
 ![Dashboard](images/dashboard.png)
 
----
-
 # Notifications
 
 ## Purpose
@@ -137,8 +130,6 @@ The notification panel displays recent payment and application updates.
 3. Close the notification panel.
 
 ![Notifications](images/notification.png)
-
----
 
 # Create a New Payment
 
@@ -186,8 +177,6 @@ The payment is created and the application redirects to the Payment Success page
 
 ![New Payment](images/newPayment.png)
 
----
-
 # Payment Success
 
 ## Purpose
@@ -212,9 +201,7 @@ Confirms successful payment creation.
 
 Users can immediately create another payment or review payment history.
 
-![Payment Success](images/paymentSuccess.png)
-
----
+![Payment Success](images/payment-success.png)
 
 # Payment History
 
@@ -246,8 +233,6 @@ Users can efficiently manage and review payment records.
 
 ![Payment History](images/paymentHistory.png)
 
----
-
 # Payment Details
 
 ## Purpose
@@ -276,24 +261,19 @@ Provides complete payment information without leaving the Payment History page.
 
 ![Payment Details](images/paymentDetailsModal.png)
 
----
-
 # Profile
 
 ## Purpose
 
 Allows users to update their profile information.
 
-## Editable Fields
+| Field | Description | Required | Ediatble Fields 
+|--------|-------------| -------- | ------------ |
+|  Name | User's name | yes    |  no    |  
+| Email | Email address | yes    | no    |  
+| Phone number  | User's phone number | yes   |
+| Company | Company name | yes   |
 
-- Name
-- Phone Number
-- Company
-
-## Read-only Fields
-
-- Name
-- Email Address
 
 ## Buttons
 
@@ -306,8 +286,6 @@ Profile information is updated successfully.
 
 ![Profile](images/profile.png)
 
----
-
 # Change Password
 
 ## Purpose
@@ -316,15 +294,15 @@ Allows users to update their account password.
 
 ## Fields
 
+| Field | Description | Required |
+|--------|-------------| -------- |
+|  Current Password | User's password | yes    |
+|  New Password | New password  | yes    | 
+| Confirm Password  | New password should match | yes   |
+
 - Current Password
 - New Password
 - Confirm Password
-
-## Validation
-
-- Current password is required.
-- New password is required.
-- New Password and Confirm Password must match.
 
 ## Buttons
 
@@ -336,8 +314,6 @@ The account password is successfully updated.
 
 ![Change Password](images/settings.png)
 
----
-
 # Contact Support
 
 ## Purpose
@@ -346,19 +322,15 @@ Allows users to submit support requests.
 
 ## Fields
 
-- Name (Read Only)
-- Email (Read Only)
-- Category
-- Priority
-- Subject
-- Description
-- Screenshot
-
-## Validation
-
-- Subject is required.
-- Description is required.
-- Screenshot must be an image (optional).
+| Field | Description | Required | Ediatble Fields |
+|--------|-------------| -------- |
+|  Name | User's name | yes    | no|
+| Email | User's email  | yes    | no|
+| Category  | Category of request | yes   | yes   |
+| Priority  | Priority of request | yes   | yes   |
+| Subject  | Subject of request | yes   | yes   |
+| Description  | Description of request | yes   | yes   |
+| Screenshot  | Screenshot of request  in image format | no   | yes   |
 
 ## Buttons
 
@@ -369,8 +341,6 @@ Allows users to submit support requests.
 A support ticket is created successfully.
 
 ![Contact Support](images/contactSupport.png)
-
----
 
 # Support Tickets
 
@@ -400,8 +370,6 @@ Users can manage all submitted support requests.
 
 ![Support Tickets](images/supportTickets.png)
 
----
-
 # Support Ticket Details
 
 ## Purpose
@@ -429,8 +397,6 @@ Displays detailed information about a support ticket.
 Users can review or remove an existing support ticket.
 
 ![Support Ticket Details](images/supportTicketModal.png)
-
----
 
 # Frequently Asked Questions
 
