@@ -271,8 +271,8 @@ Allows users to update their profile information.
 |--------|-------------| -------- | ------------ |
 |  Name | User's name | yes    |  no    |  
 | Email | Email address | yes    | no    |  
-| Phone number  | User's phone number | yes   |
-| Company | Company name | yes   |
+| Phone number  | User's phone number | yes   |yes|
+| Company | Company name | yes   |yes|
 
 
 ## Buttons
