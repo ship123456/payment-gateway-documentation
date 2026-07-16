@@ -143,16 +143,16 @@ Document every field available in your form here.
 
 Example:
 
-| Field | Description |
-|--------|-------------|
-| Customer Name | Name of the customer |
-| Payment Id | payment Id of the transaction |
-| Customer Email | Email address |
-| Phone Number | Customer phone number |
-| Amount | Payment amount |
-| Currency | Payment currency |
-| Payment Method | Selected payment method |
-| Description | Payment description |
+| Field | Description | required
+|--------|-------------|------|
+| Customer Name | Name of the customer | yes|
+| Payment Id | payment Id of the transaction |yes|
+| Customer Email | Email address |yes|
+| Phone Number | Customer phone number |yes|
+| Amount | Payment amount |yes|
+| Currency | Payment currency |yes|
+| Payment Method | Selected payment method |yes|
+| Description | Payment description |no|
 
 ## Buttons
 
