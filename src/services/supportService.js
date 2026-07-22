@@ -1,26 +1,4 @@
 const STORAGE_KEY = "supportTickets";
-const defaultTickets = [
-  {
-    id: "TKT-1001",
-    subject: "Payment Failed",
-    category: "Payment",
-    priority: "High",
-    status: "In Progress",
-    description: "Payment failed after successful UPI authorization.",
-    assignedTo: "Support Team",
-    created: "2026-06-28",
-  },
-  {
-    id: "TKT-1002",
-    subject: "Refund Request",
-    category: "Billing",
-    priority: "Medium",
-    status: "Resolved",
-    description: "Refund requested for duplicate payment.",
-    assignedTo: "Billing Team",
-    created: "2026-06-27",
-  },
-];
 
 const getTickets = () => {
   return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
