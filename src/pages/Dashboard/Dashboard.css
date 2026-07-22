@@ -263,10 +263,6 @@ td {
 
 /*responsive*/
 
-/* ===========================
-RESPONSIVE
-=========================== */
-
 @media (max-width: 1200px) {
   .card-grid {
     gap: 20px;
@@ -337,10 +333,6 @@ RESPONSIVE
 }
 
 @media (max-width: 768px) {
-  /* .card-grid {
-    grid-template-columns: 1fr;
-  } */
-
   .dashboard-bottom {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -356,11 +348,6 @@ RESPONSIVE
     align-items: flex-start;
     gap: 16px;
   }
-
-  /* .view-all {
-    width: 100%;
-    text-align: center;
-  } */
 
   table {
     min-width: 700px;

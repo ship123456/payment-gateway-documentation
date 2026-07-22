@@ -21,10 +21,6 @@
   width: 110px;
 }
 
-/* .ticket-filters button {
-  width: 140px;
-} */
-
 .ticket-filters input,
 .ticket-filters select {
   height: 44px;
@@ -190,19 +186,9 @@
     flex-direction: column;
   }
 
-  /* .ticket-filters input,
-  .ticket-filters select,
-  .ticket-filters button {
-    width: 100%;
-  } */
-
   .ticket-card {
     overflow-x: auto;
   }
-
-  /* .ticket-card table {
-    min-width: 850px;
-  } */
 
   .pagination {
     justify-content: flex-end;

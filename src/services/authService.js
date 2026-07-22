@@ -27,7 +27,6 @@ const login = (email, password) => {
     throw new Error("Invalid email or password");
   }
 
-  // Don't store password in current session
   const { password: _, ...safeUser } = user;
 
   localStorage.setItem(CURRENT_USER, JSON.stringify(safeUser));

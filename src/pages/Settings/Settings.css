@@ -10,9 +10,7 @@
   font-size: 16px;
 }
 
-/* ===========================
-   Layout
-=========================== */
+/* Layout*/
 
 .settings-grid {
   display: grid;
@@ -36,9 +34,7 @@
   color: #111827;
 }
 
-/* ===========================
-   Form
-=========================== */
+/* Form */
 
 .form-group {
   display: flex;
@@ -91,13 +87,10 @@
   font-size: 13px;
 }
 
-/* ===========================
-   Buttons
-=========================== */
+/* Buttons*/
 
 .primary-btn {
   width: 170px;
-  /* height: 50px; */
   border: none;
   border-radius: 12px;
   background: #2563eb;
@@ -115,7 +108,6 @@
 
 .secondary-btn {
   width: 170px;
-  /* height: 50px; */
   border: 1px solid #d1d5db;
   border-radius: 12px;
   background: #fff;
@@ -131,9 +123,7 @@
   transform: translateY(-1px);
 }
 
-/* ===========================
-   Notification
-=========================== */
+/* Notification*/
 
 .switch-row {
   display: flex;
@@ -157,9 +147,7 @@
   flex-shrink: 0;
 }
 
-/* ===========================
-   Billing Buttons
-=========================== */
+/* Billing Buttons*/
 
 .settings-buttons {
   display: flex;
@@ -182,17 +170,13 @@
   white-space: nowrap;
 }
 
-/* ===========================
-   Billing
-=========================== */
+/* Billing */
 
 .billing-card {
   grid-column: 1 / 3;
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/* Responsive */
 
 @media (max-width: 768px) {
   .settings-page h1 {

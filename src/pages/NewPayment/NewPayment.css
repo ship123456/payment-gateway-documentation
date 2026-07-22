@@ -75,14 +75,7 @@
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-/* 
-   Buttons */
-
-/* 
-
-/* ===========================
-   Buttons
-=========================== */
+/*  Buttons */
 
 .form-buttons {
   display: flex;
@@ -123,9 +116,7 @@
   transform: translateY(-1px);
 }
 
-/* ===========================
-   Mobile
-=========================== */
+/* responsive */
 
 @media (max-width: 768px) {
   .payment-layout {
@@ -210,10 +201,6 @@ Payment Summary */ .required {
   font-size: 30px;
   margin-bottom: 18px;
 }
-
-/* 
-   Responsive
-*/
 
 @media (max-width: 992px) {
   .payment-layout {

@@ -62,9 +62,7 @@
   font-weight: 600;
 }
 
-/* ==========================
-   Buttons
-========================== */
+/* Buttons */
 
 .success-buttons {
   display: flex;
@@ -113,9 +111,7 @@
   background: #f3f4f6;
 }
 
-/* ==========================
-   Responsive
-========================== */
+/* Responsive */
 
 @media (max-width: 768px) {
   .success-card {
