@@ -2,11 +2,14 @@
 
 PayFlow is a React-based payment gateway management application that simulates the complete payment lifecycle. It enables users to create and manage payments, monitor transactions, manage account information, and submit support requests through a clean and responsive interface.
 
-![Dashboard](../images/dashboard.png)
+
+![Dashboard](images/dashboard.png)
 
 ## Table of Contents
 - [Overview](#overview)
 - [Version Information](#version-information)
+- [Live Demo](#live-demo)
+- [Demo Access](#demo-access)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
@@ -26,6 +29,15 @@ PayFlow is a React-based payment gateway management application that simulates t
 | Release Date | July 2026 |
 | Status | Stable |
 | License | Educational & Portfolio Project |
+
+## Live Demo
+
+https://ship123456.github.io/portfolio-website/
+
+## Demo Credentials
+
+**Email:** admin@payflow.com
+**Password:** password1234
 
 # Overview
 
