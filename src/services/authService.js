@@ -11,10 +11,20 @@ const defaultUsers = [
     company: "PayFlow Technologies",
   },
 ];
-const getUsers = () => {
+const initializeAuth = () => {
   if (!localStorage.getItem(STORAGE_KEY)) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultUsers));
   }
+
+  if (!localStorage.getItem(CURRENT_USER)) {
+    const { password, ...safeUser } = defaultUsers[0];
+    localStorage.setItem(CURRENT_USER, JSON.stringify(safeUser));
+  }
+};
+
+initializeAuth();
+
+const getUsers = () => {
   return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 };
 

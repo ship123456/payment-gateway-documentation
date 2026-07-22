@@ -1,5 +1,36 @@
 const STORAGE_KEY = "supportTickets";
 
+const defaultTickets = [
+  {
+    id: "TKT-1001",
+    subject: "Payment failed",
+    category: "Payment Issue",
+    priority: "High",
+    status: "Open",
+    assignedTo: "Support Team",
+    created: "2026-07-20",
+    description: "Payment failed during checkout.",
+  },
+  {
+    id: "TKT-1002",
+    subject: "Refund request",
+    category: "Refund",
+    priority: "Medium",
+    status: "In Progress",
+    assignedTo: "Support Team",
+    created: "2026-07-18",
+    description: "Customer requested a refund.",
+  },
+];
+
+const initializeTickets = () => {
+  if (!localStorage.getItem(STORAGE_KEY)) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultTickets));
+  }
+};
+
+initializeTickets();
+
 const getTickets = () => {
   return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 };
