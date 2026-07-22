@@ -131,7 +131,7 @@ Before running the application, ensure the following software is installed on yo
 Clone the repository.
 
 ```bash
-git clone https://github.com/ship123456/payment-gateway
+git clone https://github.com/ship123456/Payment-Gateway-Application
 ```
 
 Navigate to the project directory.
